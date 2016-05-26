@@ -22,7 +22,7 @@ for album in albums:
 		print i
 		with open(path+i) as songs:
 			songLyrics['songs'].iloc[t] = i
-			songLyrics['lyrics'].iloc[t] = songs.readlines()
+			songLyrics['lyrics'].iloc[t] = ''.join(songs.readlines())
 		t += 1	
 print songLyrics.head()
-songLyrics.to_csv('Coldplay Lyrics.csv')
+songLyrics.to_csv('ColdplaySongs.csv')
