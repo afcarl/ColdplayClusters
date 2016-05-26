@@ -58,8 +58,9 @@ for i in range( 0, len( corp ) ):
 n = len( dict )
 index = gensim.similarities.SparseMatrixSimilarity( tfidf_model[ corp ], num_features = n )
 
-#  Print TFIDF vectors and pairwise similarity per document
 
+#  Print TFIDF vectors and pairwise similarity per document
+matrix = np.zeros((73,73))
 for i in range( 0, len( tfidf ) ):
     s = 'Doc ' + str( i + 1 ) + ' TFIDF:'
 
@@ -70,10 +71,25 @@ for i in range( 0, len( tfidf ) ):
     print s
 
 for i in range( 0, len( corp ) ):
-    print 'Doc', ( i + 1 ), 'sim: [ ',
+    #print 'Doc', ( i + 1 ), 'sim: [ ',
 
     sim = index[ tfidf_model[ corp[ i ] ] ]
+#    print len(sim)
+    matrix[i,:] = np.asarray(sim)
     for j in range( 0, len( sim ) ):
-        print '%.3f ' % sim[ j ],
+       sim[j]
 
-    print ']'
+print matrix
+matrix_cluster = k_means(matrix,n_clusters = 5)
+mc1 = matrix_cluster[1]
+i = 0
+while(i<5):
+        print '\n'
+        print 'in cluster'+str(i)
+        print '\n'
+        for m in range(len(mc1)):
+
+                if mc1[m] == i:
+                        print data['songs'][m]
+
+        i = i+1
