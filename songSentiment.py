@@ -1,3 +1,6 @@
+import sys
+sys.path.append('C:\Users\priya\OneDrive\Documents\PassionProjects\ColdplayData')
+
 from anew_module import anew
 import os
 import pandas as pd 
