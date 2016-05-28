@@ -7,7 +7,7 @@ albums = os.listdir(albums_path)
 #You have songs from 7 albums
 #['AHeadFullOfDreams', 'ARushOfBloodToTheHead', 'GhostStories', 'MyloXyloto', 'Parachutes', 'VivaLaVida', 'X&Y']
 #In Total there are 73 songs
-songLyrics = pd.DataFrame(columns = ['songs','lyrics'], index = range(73))
+songLyrics = pd.DataFrame(columns = ['songs','lyrics'], index = range(75))
 songLyrics = songLyrics.fillna(0)
 t = 0
 songsL = []
