@@ -1,0 +1,7 @@
+
+The python25/ folder contains VamPy compiled on Windows Vista using
+Visual C++ with Python 2.5 and NumPy 1.1.
+
+The python26/ folder contains VamPy compiled on Windows Vista using
+Visual C++ with Python 2.6 and NumPy 1.3.
+

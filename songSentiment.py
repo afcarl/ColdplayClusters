@@ -1,6 +1,4 @@
 import sys
-sys.path.append('C:\Users\priya\OneDrive\Documents\PassionProjects\ColdplayData')
-
 from anew_module import anew
 import os
 import pandas as pd 
@@ -8,7 +6,7 @@ import numpy as np
 from sklearn import preprocessing
 from sklearn.cluster import k_means
 
-data = pd.read_csv('ColdplayLyrics.csv')
+data = pd.read_csv('ColdplaySongs.csv')
 
 ## GETTING THE VALENCE AND AROUSAL VALUES - PUTTING THEM IN THE withSentimenT.csv 
 arousal = []
@@ -42,4 +40,4 @@ while(i<10):
 
 	i = i+1	
 
-#data1.to_csv('withSentiment.csv')
+data1.to_csv('withSentiment.csv')
